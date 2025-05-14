@@ -1,15 +1,16 @@
-from sklearn.datasets import load_digits
+from sklearn.datasets import load_iris
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sn
 
-digits = load_digits()
-print(digits.data[0]) # Example of an observation
+iris = load_iris()
+print(iris.data[0])
+print(iris.target[0])
 
-
-X_train, X_test, y_train, y_test = train_test_split(digits.data,digits.target, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2)
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
