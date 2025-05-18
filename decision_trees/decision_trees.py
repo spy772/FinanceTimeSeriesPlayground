@@ -16,7 +16,7 @@ X = df.drop('Survived', axis='columns')
 y = df.Survived # didn't drop in-place, so it still exists in df
 
 # Decide which version is better later
-# inputs.Sex = inputs.Sex.map({'male': 1, 'female': 2})
+X.Sex = X.Sex.map({'male': 1, 'female': 2})
 # pd.concat([X, pd.get_dummies(X.Sex)])
 # X.drop(['Sex', 'male'], inplace=True)
 
