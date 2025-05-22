@@ -4,6 +4,7 @@ from sklearn.model_selection import cross_val_score
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+from aeon.classification.convolution_based import RocketClassifier
 
 # Generate monthly dates for one year
 dates = pd.date_range(start='2024-01-01', periods=12, freq='MS')
@@ -47,17 +48,18 @@ test6 = [42.15, 58.37, 26.94, 36.81, 45.67, 33.42, 51.93, 28.74, 39.26, 47.58, 3
 test = [test1, test2, test3, test4, test5, test6]
 test_answers = [1,1,2,2,3,3]
 
-model = LogisticRegression(max_iter=10000)
+# model = LogisticRegression(max_iter=10000)
 # model = tree.DecisionTreeClassifier()
+model = RocketClassifier()
 
-model.fit(mixed, mixed_answers)
+model.fit([mixed], mixed_answers)
 
-print(model.score(test, test_answers))
+print(model.score([test], test_answers))
 
 combined = mixed + test
 combined_answers = mixed_answers + test_answers
 
-print('Cross Val Score: ', cross_val_score(LogisticRegression(solver='liblinear',multi_class='ovr'), combined, combined_answers,cv=7))
+print('Cross Val Score: ', cross_val_score(RocketClassifier(), [combined], combined_answers,cv=7))
 
 
 
@@ -70,7 +72,7 @@ predict_array_same = [[63.71, 47.84, 63.62, 89.45, 28.97, 44.13, 58.36, 43.91, 6
 
 predict_array = predict_array_increase
 
-print('Predict: ', model.predict(predict_array))
+print('Predict: ', model.predict([predict_array]))
 
 
 # Create a DataFrame
