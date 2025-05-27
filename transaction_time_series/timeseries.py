@@ -4,7 +4,7 @@ from sklearn.model_selection import cross_val_score
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from aeon.classification.convolution_based import RocketClassifier
+from aeon.classification.hybrid import HIVECOTEV2
 
 # Generate monthly dates for one year
 dates = pd.date_range(start='2024-01-01', periods=12, freq='MS')
@@ -50,16 +50,22 @@ test_answers = [1,1,2,2,3,3]
 
 # model = LogisticRegression(max_iter=10000)
 # model = tree.DecisionTreeClassifier()
-model = RocketClassifier()
-
-model.fit([mixed], mixed_answers)
-
-print(model.score([test], test_answers))
-
 combined = mixed + test
 combined_answers = mixed_answers + test_answers
+mixed_np = np.asarray(mixed, dtype=np.float32)
+test_np = np.asarray(test, dtype=np.float32)
+combined_np = np.asarray(combined, dtype=np.float32)
 
-print('Cross Val Score: ', cross_val_score(RocketClassifier(), [combined], combined_answers,cv=7))
+mixed_ans_np = np.asarray(mixed_answers, dtype=np.float32)
+test_ans_np = np.asarray(test_answers, dtype=np.float32)
+combined_ans_np = np.asarray(combined_answers, dtype=np.float32)
+model = HIVECOTEV2()
+
+model.fit(mixed_np, mixed_ans_np)
+
+print(model.score(test_np, test_ans_np))
+
+print('Cross Val Score: ', cross_val_score(HIVECOTEV2(), combined_np, combined_ans_np, cv=7))
 
 
 
@@ -71,8 +77,9 @@ predict_array_decrease = [[93.71, 47.84, 63.62, 89.45, 58.97, 44.13, 48.36, 33.9
 predict_array_same = [[63.71, 47.84, 63.62, 89.45, 28.97, 44.13, 58.36, 43.91, 60.22, 56.38, 52.15, 61.49]]
 
 predict_array = predict_array_increase
+predict_np = np.asarray(predict_array, dtype=np.float32)
 
-print('Predict: ', model.predict([predict_array]))
+print('Predict: ', model.predict(predict_np))
 
 
 # Create a DataFrame
