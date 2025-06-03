@@ -147,8 +147,11 @@ def plot_multiple_timeseries(df: pd.DataFrame):
     axes[2, 0].plot(df.columns, df.iloc[4])
     axes[2, 0].set_title('List 5')
 
-    # Remove the last subplot
-    fig.delaxes(axes[2,1])
+    axes[2, 1].plot(df.columns, df.iloc[5])
+    axes[2, 1].set_title('List 6')
+
+    # Remove the last subplot if needed (only want to show 5)
+    # fig.delaxes(axes[2,1])
 
     # Adjust layout
     plt.tight_layout()

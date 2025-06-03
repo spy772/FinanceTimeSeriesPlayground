@@ -59,7 +59,7 @@ X = [up_1, up_2, up_3, up_4, up_5, up_6,
 # Create classifiers for each one
 y = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4]
 
-def load_timeseries_data(as_numpy: bool) -> list | np.ndarray:
+def load_timeseries_data(as_numpy: bool) -> list[list[float]] | np.ndarray:
     """
     Returns X, y either as Python array or numpy array
     """
