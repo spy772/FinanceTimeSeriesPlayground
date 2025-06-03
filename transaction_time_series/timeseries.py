@@ -1,10 +1,13 @@
 from sklearn.linear_model import LogisticRegression
 from sklearn import tree
-from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import cross_val_score, train_test_split
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from aeon.classification.hybrid import HIVECOTEV2
+from aeon.classification.distance_based import KNeighborsTimeSeriesClassifier
+from aeon.classification.interval_based import RSTSF
+from generate_data import load_timeseries_data
 
 # Generate monthly dates for one year
 dates = pd.date_range(start='2024-01-01', periods=12, freq='MS')
@@ -18,6 +21,7 @@ expenses3 = [9.83, 18.27, 28.39, 36.92, 45.73, 52.1, 57.35, 60.72, 64.48, 67.12,
 expenses4 = [14.16, 15.95, 18.42, 22.83, 28.47, 36.18, 43.92, 52.76, 64.11, 72.58, 81.37, 89.95]
 expenses5 = [21.49, 26.73, 23.88, 32.65, 38.47, 43.92, 40.73, 49.27, 57.84, 64.38, 68.92, 74.16]
 
+increasing = [expenses1, expenses2, expenses3, expenses4, expenses5]
 
 # DECREASING
 expenses6 = [92.38, 88.47, 83.92, 79.64, 76.28, 70.95, 66.12, 61.43, 58.97, 54.28, 51.36, 47.19]
@@ -26,6 +30,7 @@ expenses8 = [84.56, 78.21, 80.42, 71.39, 76.33, 66.81, 69.12, 58.63, 61.18, 50.7
 expenses9 = [91.73, 85.49, 78.95, 73.84, 68.92, 72.65, 64.39, 60.18, 55.04, 48.37, 44.62, 38.75]
 expenses10 = [87.92, 83.46, 80.17, 76.32, 71.48, 67.29, 61.74, 58.91, 54.23, 49.78, 44.32, 40.15]
 
+decreasing = [expenses6, expenses7, expenses8, expenses9, expenses10]
 
 # ABOUT SAME
 expenses11 = [23.16, 27.42, 21.89, 25.77, 22.94, 26.18, 24.36, 29.61, 22.15, 27.39, 24.92, 23.83]
@@ -34,9 +39,11 @@ expenses13 = [53.91, 59.14, 57.26, 52.48, 56.37, 54.19, 58.64, 51.73, 57.92, 53.
 expenses14 = [68.44, 74.39, 70.28, 65.93, 72.16, 66.78, 69.92, 73.41, 71.23, 67.45, 70.86, 68.97]
 expenses15 = [63.81, 78.49, 54.92, 69.34, 61.77, 45.26, 74.53, 58.39, 70.11, 52.73, 66.84, 59.47]
 
+neutral = [expenses11, expenses12, expenses13, expenses14, expenses15]
 
 mixed = [expenses1, expenses11, expenses12, expenses6, expenses2, expenses13, expenses7, expenses3, expenses4, expenses14, expenses5, expenses15, expenses8, expenses9, expenses10]
-mixed_answers = [1,3,3,2,1,3,2,1,1,3,1,3,2,2,2]
+# mixed_answers = [1,3,3,2,1,3,2,1,1,3,1,3,2,2,2]
+mixed_answers = [0,2,2,4,0,2,4,0,0,2,0,2,4,4,4] # For aeon training
 
 test1 = [18.35, 21.42, 26.79, 31.67, 37.58, 42.91, 49.24, 55.87, 61.33, 68.94, 75.62, 81.37]
 test2 = [23.71, 27.84, 33.62, 29.45, 38.97, 44.13, 48.36, 53.91, 60.22, 66.38, 70.15, 76.49]
@@ -56,16 +63,25 @@ mixed_np = np.asarray(mixed, dtype=np.float32)
 test_np = np.asarray(test, dtype=np.float32)
 combined_np = np.asarray(combined, dtype=np.float32)
 
-mixed_ans_np = np.asarray(mixed_answers, dtype=np.float32)
-test_ans_np = np.asarray(test_answers, dtype=np.float32)
-combined_ans_np = np.asarray(combined_answers, dtype=np.float32)
-model = HIVECOTEV2()
+mixed_ans_np = np.asarray(mixed_answers, dtype=np.int32)
+test_ans_np = np.asarray(test_answers, dtype=np.int32)
+combined_ans_np = np.asarray(combined_answers, dtype=np.int32)
 
-model.fit(mixed_np, mixed_ans_np)
+# Other things I have done
+X, y = load_timeseries_data(as_numpy=True)
+X = np.concatenate((X, mixed_np))
+y = np.concatenate((y, mixed_ans_np))
 
-print(model.score(test_np, test_ans_np))
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
-print('Cross Val Score: ', cross_val_score(HIVECOTEV2(), combined_np, combined_ans_np, cv=7))
+# Train an aeon model
+model = RSTSF()
+
+model.fit(X_train, y_train)
+
+print(model.score(X_test, y_test))
+
+print('Cross Val Score: ', cross_val_score(RSTSF(), X, y, cv=7))
 
 
 
@@ -83,16 +99,63 @@ print('Predict: ', model.predict(predict_np))
 
 
 # Create a DataFrame
-df = pd.DataFrame({'Expense': predict_array[0]}, index=dates)
+# df = pd.DataFrame({'Expense': predict_array[0]}, index=dates)
+columns = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+df = pd.DataFrame(neutral)
+df.columns = columns
 
 # Plot the line chart
-plt.figure(figsize=(10, 5))
-plt.plot(df.index, df['Expense'], marker='o', linestyle='-', color='teal')
-plt.title('Monthly Expenses for 1 Year')
-plt.xlabel('Month')
-plt.ylabel('Expense ($)')
-plt.grid(True)
-plt.xticks(df.index, df.index.strftime('%b'), rotation=45)
-plt.tight_layout()
-plt.show()
+# plt.figure(figsize=(10, 5))
+# plt.plot(df.index, df['Expense'], marker='o', linestyle='-', color='teal')
+# plt.title('Monthly Expenses for 1 Year')
+# plt.xlabel('Month')
+# plt.ylabel('Expense ($)')
+# plt.grid(True)
+# plt.xticks(df.index, df.index.strftime('%b'), rotation=45)
+# plt.tight_layout()
+# plt.show()
 
+def plot_timeseries(df: pd.DataFrame | pd.Series):
+    plt.figure(figsize=(10, 5))
+    print(df)
+    plt.plot(df.index, df, marker='o', linestyle='-', color='teal')
+    plt.title('Monthly Expenses for 1 Year')
+    plt.xlabel('Month')
+    plt.ylabel('Expense ($)')
+    plt.grid(True)
+    # plt.xticks(df.index, df.index.__str__(), rotation=45)
+    plt.tight_layout()
+    plt.show()
+
+def plot_multiple_timeseries(df: pd.DataFrame):
+    # Create a figure and a set of subplots
+    fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(10, 8))
+
+    # # Plot data on the subplots
+    axes[0, 0].plot(df.columns, df.iloc[0])
+    axes[0, 0].set_title('List 1')
+
+    axes[0, 1].plot(df.columns, df.iloc[1])
+    axes[0, 1].set_title('List 2')
+
+    axes[1, 0].plot(df.columns, df.iloc[2])
+    axes[1, 0].set_title('List 3')
+
+    axes[1, 1].plot(df.columns, df.iloc[3])
+    axes[1, 1].set_title('List 4')
+
+    axes[2, 0].plot(df.columns, df.iloc[4])
+    axes[2, 0].set_title('List 5')
+
+    # Remove the last subplot
+    fig.delaxes(axes[2,1])
+
+    # Adjust layout
+    plt.tight_layout()
+
+    # Show the plot
+    plt.show()
+
+# print(df.iloc[0])
+# plot_timeseries(df.iloc[0])
+plot_multiple_timeseries(df)
