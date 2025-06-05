@@ -1,4 +1,5 @@
 from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
 from sklearn import tree
 from sklearn.model_selection import cross_val_score, train_test_split
 import matplotlib.pyplot as plt
@@ -7,10 +8,10 @@ import numpy as np
 from aeon.classification.hybrid import HIVECOTEV2
 from aeon.classification.distance_based import KNeighborsTimeSeriesClassifier
 from aeon.classification.interval_based import RSTSF
-#from aeon.classification.deep_learning import LITETimeClassifier
+from aeon.classification.deep_learning import LITETimeClassifier
 from aeon.classification.feature_based import Catch22Classifier
 from aeon.classification.interval_based import TimeSeriesForestClassifier
-#from aeon.classification.shapelet_based import LearningShapeletClassifier
+from aeon.classification.shapelet_based import LearningShapeletClassifier
 from aeon.classification.ordinal_classification import IndividualOrdinalTDE
 from generate_data import load_timeseries_data
 
@@ -83,6 +84,12 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 model_list = []
 model_dict = dict()
 
+log_regress = LogisticRegression() # Good ol' logistic regression
+model_list.append(log_regress)
+model_dict["logistic_regression"] = log_regress
+svc = SVC() # Good ol' logistic regression
+model_list.append(svc)
+model_dict["support_vector_machine"] = svc
 rstsf = RSTSF() # Interval-based model
 model_list.append(rstsf)
 model_dict["rstsf"] = rstsf
@@ -95,16 +102,16 @@ model_dict["k_neighbours"] = k_neighbours
 ordinal = IndividualOrdinalTDE() # Ordinal-based model
 model_list.append(IndividualOrdinalTDE)
 model_dict["ordinal"] = ordinal
-# shapelet = LearningShapeletClassifier() # Shapelet-based model
-# model_list.append(shapelet)
-# model_dict["shapelet"] = shapelet
+shapelet = LearningShapeletClassifier() # Shapelet-based model
+model_list.append(shapelet)
+model_dict["shapelet"] = shapelet
 catch22 = Catch22Classifier() # Feature-based model
 model_list.append(catch22)
 model_dict["catch22"] = catch22
 # Heavier models start here
-# deep_learning = LITETimeClassifier() # Deep-learning-based model
-# model_list.append(deep_learning)
-# model_dict["deep_learning"] = deep_learning
+deep_learning = LITETimeClassifier() # Deep-learning-based model
+model_list.append(deep_learning)
+model_dict["deep_learning"] = deep_learning
 hive_cote_v2 = HIVECOTEV2() # Ensemble/Hybrid model
 model_list.append(hive_cote_v2)
 model_dict["hive_cote_v2"] = hive_cote_v2
