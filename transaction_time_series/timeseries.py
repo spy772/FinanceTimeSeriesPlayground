@@ -13,7 +13,7 @@ from aeon.classification.feature_based import Catch22Classifier
 from aeon.classification.interval_based import TimeSeriesForestClassifier
 from aeon.classification.shapelet_based import LearningShapeletClassifier
 from aeon.classification.ordinal_classification import IndividualOrdinalTDE
-from generate_data import load_timeseries_data
+from transaction_time_series.generated_data import load_timeseries_data
 
 # Generate monthly dates for one year
 dates = pd.date_range(start='2024-01-01', periods=12, freq='MS')
@@ -87,7 +87,7 @@ model_dict = dict()
 log_regress = LogisticRegression() # Good ol' logistic regression
 model_list.append(log_regress)
 model_dict["logistic_regression"] = log_regress
-svc = SVC() # Good ol' logistic regression
+svc = SVC() # Support vector macines
 model_list.append(svc)
 model_dict["support_vector_machine"] = svc
 rstsf = RSTSF() # Interval-based model
