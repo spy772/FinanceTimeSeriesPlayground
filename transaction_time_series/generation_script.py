@@ -3,7 +3,7 @@ import random
 import matplotlib.pyplot as plt
 import pandas as pd
 
-def generate_variable_trend(trend_type, length=12, scale_range=(50, 10000), noise_level=0.05):
+def generate_variable_trend(trend_type, length=12, scale_range=(50, 10000), noise_level=0.1):
     # Base time array, not always uniformly spaced
     t = np.linspace(0, 1, length)
     
@@ -15,7 +15,7 @@ def generate_variable_trend(trend_type, length=12, scale_range=(50, 10000), nois
     elif trend_type == 'neutral':
         trend = np.full(length, 0.5) + np.random.normal(0, 0.05, size=length)
     elif trend_type == 'decreasing_slow':
-        trend = np.log1p((1 - t) * random.uniform(2, 10))[::-1]
+        trend = np.log1p((1 - t) * random.uniform(2, 10))
     elif trend_type == 'decreasing':
         trend = np.power((1 - t), random.uniform(0.8, 2.5))
     else:
@@ -39,10 +39,8 @@ def generate_variable_trend(trend_type, length=12, scale_range=(50, 10000), nois
         if random.random() < 0.3:  # 30% chance of local distortion
             jagged[i] += np.random.normal(0, 0.1)
     
-    # Add sharp jumps or drops occasionally, less chance for neutral
+    # Add sharp jumps or drops occasionally
     for _ in range(random.randint(0, 2)):
-        if trend_type == "neutral" and random.random() > 0.15:
-            continue # 15% chance to NOT hit this continue for neutral trend_types
         jump_idx = random.randint(1, length - 2)
         jump_magnitude = np.random.normal(0, 0.2)
         jagged[jump_idx] += jump_magnitude
@@ -52,11 +50,9 @@ def generate_variable_trend(trend_type, length=12, scale_range=(50, 10000), nois
     max_val = random.uniform(scale_range[1] * 0.5, scale_range[1])
     scaled = jagged * (max_val - min_val) + min_val
 
-    # Final noise, less so for neutral
-    final_series = scaled
-    if trend_type != "neutral" or random.random() < 0.15:
-        noise = np.random.normal(0, noise_level * (max_val - min_val), size=length)
-        final_series += noise
+    # Final noise
+    noise = np.random.normal(0, noise_level * (max_val - min_val), size=length)
+    final_series = scaled + noise
 
     return final_series.tolist()
 
@@ -93,7 +89,7 @@ print("Saved to synthetic_timeseries_data.csv")
 # Optional plot
 for cat, series_list in categories.items():
     plt.figure(figsize=(10, 4))
-    for series in series_list[:5]:
+    for series in series_list[:15]:
         plt.plot(series)
     plt.title(f"{cat} (sample of 5)")
     plt.xlabel("Time")

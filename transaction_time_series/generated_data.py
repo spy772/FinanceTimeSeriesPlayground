@@ -7,6 +7,8 @@
 #
 # About 12 timepoints per observation
 import numpy as np
+import pandas as pd
+
 
 up_1 = [16.8, 21.3, 25.1, 29.2, 33.3, 35.8, 44.8, 50.7, 51.4, 55.7, 60.2, 65.3]
 up_2 = [26.1, 27.2, 33.5, 34.6, 38.7, 39.3, 44.2, 47.3, 48.2, 51.7, 54.3, 57.1]
