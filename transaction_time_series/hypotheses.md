@@ -16,10 +16,12 @@ Scikit Learn Models
     - Hypothesis: overall 5/10 option
 
 * Logistic Regeression
-    - Meant for binary data, it should not work well for our needs
-    - Need to investigate why it sometimes functions for our datasets
+    - UPDATE: Can perform both binary and multiclass classification
+        - For multiclass, it produces a probability/ranking for each possible class on an observation, and then normalizes the suite of probabilities and picks the one with the highest value as the predicted class
+        - Binary uses sigmoid for simple calculations, multiclass uses softmax
+    - Very simple model that could work quite nicely overall actually; easy to understand and very fast to calculate
     - Also lightweight and quick
-    - Hypothesis: overall 2/10 option
+    - Hypothesis: Overall 8/10 option
 
 * Descision Trees
     - Requires little data preparation (good for our needs)
@@ -132,7 +134,22 @@ Aeon Classification Models
     - Hypothesis: Overall 5/10 score because of non-understandability of how it all works (but does sound more promising overall compared to Dictionary-based classifiers to be honest...)
 
 * Deep Learning
-    - 
+    - Not much explanation on the `aeon` page, but typically is the same process as with most deep learning models
+        - Most of theirs are an ensemble of a few smaller models to create a larger one
+        - Residual Network is the one that `aeon` deems the best-performing architecture for time series classification 
+    - Deep learning models are very good for convolutional tasks, and those with high amounts of data/observations
+    - `aeon` provides pre-built deep learning models (not pre-trained) that are good for specific tasks (image recognition seems to be the key trait for most of them, however)
+        - Thus, we do not need to build all the specificities that `tensorflow` needs us to (number of layers, neurons, activation functions, etc.)
+    - Would be very heavy computationally and would take a long time to run too
+        - Also we have quite a minimal amount of data and I don't believe the models will run too well with such low amounts of data
+    - Hypothesis: Overall score of 6/10
+        - Becomes higher with more data
 
 * HIVECOTE2 (Ensemble/Hybrid)
-    - 
+    - Hybrid models can be used by those who do not have vast amounts of prior knowledge on a time series classification task
+    - It seems like the model itself picks out the respective model that best suits your data based on how well it performs in predictive analysis, but this makes HIVECOTE2 very resource intensive since it will run many heavy models (dictionary-based, convolutional, and some lighter ones like interval and feature-based)
+        - Lots of transformer architecture is used as a result
+    - **It is not designed to work really quickly with smaller problems**
+        - Thus, it seems insuitable for our needs
+        - However, you can set a time limit of execution to help speed things up, although this will affect accuracy most likely
+    - Hypothesis: Overall score of 4/10
