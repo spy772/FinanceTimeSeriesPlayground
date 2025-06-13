@@ -1,10 +1,15 @@
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
-from sklearn import tree
 from sklearn.model_selection import cross_val_score, train_test_split
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import SGDClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
 from aeon.classification.hybrid import HIVECOTEV2
 from aeon.classification.distance_based import KNeighborsTimeSeriesClassifier
 from aeon.classification.interval_based import RSTSF
@@ -13,7 +18,7 @@ from aeon.classification.feature_based import Catch22Classifier
 from aeon.classification.interval_based import TimeSeriesForestClassifier
 from aeon.classification.shapelet_based import LearningShapeletClassifier
 from aeon.classification.ordinal_classification import IndividualOrdinalTDE
-from transaction_time_series.generated_data import load_timeseries_data
+from transaction_time_series.data_generation.generated_data import load_timeseries_data
 
 # Generate monthly dates for one year
 dates = pd.date_range(start='2024-01-01', periods=12, freq='MS')
@@ -84,12 +89,32 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 model_list = []
 model_dict = dict()
 
+lin_regress = LinearRegression() # Linear Regression
+model_list.append(lin_regress)
+model_dict["linear_regression"] = lin_regress
+stochastic_gd = SGDClassifier() # Stochastic Gradient Descent
+model_list.append(stochastic_gd)
+model_dict["stochastic_gradient_descent"] = stochastic_gd
 log_regress = LogisticRegression() # Good ol' logistic regression
 model_list.append(log_regress)
 model_dict["logistic_regression"] = log_regress
+decision_tree = DecisionTreeClassifier() # Decision Trees
+model_list.append(decision_tree)
+model_dict["decision_tree"] = decision_tree
 svc = SVC() # Support vector macines
 model_list.append(svc)
 model_dict["support_vector_machine"] = svc
+random_forest = RandomForestClassifier() # Random Forest
+model_list.append(random_forest)
+model_dict["random_forest"] = random_forest
+naive_bayes = GaussianNB() # Naive Bayes
+model_list.append(naive_bayes)
+model_dict["naive_bayes"] = naive_bayes
+knn = KNeighborsClassifier() # KNN
+model_list.append(knn)
+model_dict["k_nearest_neighbours"] = knn
+
+# Aeon models
 rstsf = RSTSF() # Interval-based model
 model_list.append(rstsf)
 model_dict["rstsf"] = rstsf
