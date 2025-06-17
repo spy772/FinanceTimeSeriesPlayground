@@ -1,4 +1,5 @@
 from sklearn.model_selection import cross_val_score, train_test_split
+from sklearn.preprocessing import normalize
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -18,7 +19,7 @@ from aeon.classification.feature_based import Catch22Classifier
 from aeon.classification.interval_based import TimeSeriesForestClassifier
 from aeon.classification.shapelet_based import LearningShapeletClassifier
 from aeon.classification.ordinal_classification import IndividualOrdinalTDE
-from transaction_time_series.data_generation.generated_data import load_timeseries_data
+from data_generation.generated_data import load_timeseries_data
 
 # Generate monthly dates for one year
 dates = pd.date_range(start='2024-01-01', periods=12, freq='MS')
@@ -82,8 +83,10 @@ combined_ans_np = np.asarray(combined_answers, dtype=np.int32)
 X, y = load_timeseries_data(as_numpy=True)
 X = np.concatenate((X, mixed_np))
 y = np.concatenate((y, mixed_ans_np))
+# Without normalization, differnt scales of the data will render innacurate models
+X_norm = normalize(X, norm='l2') # L2 Normalization to have scaled data be within range of 0-1
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
+X_train, X_test, y_train, y_test = train_test_split(X_norm, y, test_size=0.3)
 
 # Initialize various models, append them all to a list that will be used to run on the data
 model_list = []
@@ -146,7 +149,7 @@ for model_name, model in model_dict.items():
     print(f"Running model: {model_name} \n")
     model.fit(X_train, y_train)
     print(f"Model score for {model_name}: {model.score(X_test, y_test)}")
-    print(f"Cross Val Score for {model_name}: {model_name, cross_val_score(model, X, y, cv=7)} \n\n")
+    print(f"Cross Val Score for {model_name}: {model_name, cross_val_score(model, X_norm, y, cv=7)} \n\n")
     print("---------- \n\n")
 
 
