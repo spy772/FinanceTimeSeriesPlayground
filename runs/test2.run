@@ -1,0 +1,381 @@
+ 
+
+----------
+
+
+Running model: linear_regression (scikit) 
+
+Single Run - Training Start time: 2025-06-18 13:12:20.420090
+Single Run - Training End time: 2025-06-18 13:12:20.420499
+Single Run - Total Training time (in seconds): 0.000409 
+
+Single Run - Score Start time: 2025-06-18 13:12:20.420513
+Single Run - Model score for linear_regression (scikit): 0.8776352405548096
+Single Run - Score End time: 2025-06-18 13:12:20.420788
+Single Run - Total Score time (in seconds): 0.000275 
+
+Cross Val - Start time: 2025-06-18 13:12:20.420793
+Cross Val - Score: [ 0.         -2.8934598   0.20835721 -1.02390718 -2.66171503  0.
+  0.82799816]
+Cross Val - Average: -0.7918180908475604
+Crolss Val - End time: 2025-06-18 13:12:20.423611
+Cross Val - Total time (in seconds): 0.002818 
+
+Total time to run fit, score and cross val (in seconds): 0.003533 
+
+ 
+
+----------
+
+
+Running model: stochastic_gradient_descent (scikit) 
+
+Single Run - Training Start time: 2025-06-18 13:12:20.423623
+Single Run - Training End time: 2025-06-18 13:12:20.424739
+Single Run - Total Training time (in seconds): 0.001116 
+
+Single Run - Score Start time: 2025-06-18 13:12:20.424751
+Single Run - Model score for stochastic_gradient_descent (scikit): 0.4166666666666667
+Single Run - Score End time: 2025-06-18 13:12:20.424952
+Single Run - Total Score time (in seconds): 0.000201 
+
+Cross Val - Start time: 2025-06-18 13:12:20.424959
+Cross Val - Score: [0.55555556 0.58823529 0.47058824 0.52941176 0.64705882 0.64705882
+ 0.52941176]
+Cross Val - Average: 0.5667600373482726
+Crolss Val - End time: 2025-06-18 13:12:20.432752
+Cross Val - Total time (in seconds): 0.007793 
+
+Total time to run fit, score and cross val (in seconds): 0.009137 
+
+ 
+
+----------
+
+
+Running model: logistic_regression (scikit) 
+
+Single Run - Training Start time: 2025-06-18 13:12:20.432764
+Single Run - Training End time: 2025-06-18 13:12:20.434489
+Single Run - Total Training time (in seconds): 0.001725 
+
+Single Run - Score Start time: 2025-06-18 13:12:20.434497
+Single Run - Model score for logistic_regression (scikit): 0.6111111111111112
+Single Run - Score End time: 2025-06-18 13:12:20.434654
+Single Run - Total Score time (in seconds): 0.000157 
+
+Cross Val - Start time: 2025-06-18 13:12:20.434659
+Cross Val - Score: [0.72222222 0.64705882 0.52941176 0.58823529 0.52941176 0.52941176
+ 0.64705882]
+Cross Val - Average: 0.5989729225023342
+Crolss Val - End time: 2025-06-18 13:12:20.442901
+Cross Val - Total time (in seconds): 0.008242 
+
+Total time to run fit, score and cross val (in seconds): 0.010143 
+
+ 
+
+----------
+
+
+Running model: decision_tree (scikit) 
+
+Single Run - Training Start time: 2025-06-18 13:12:20.442912
+Single Run - Training End time: 2025-06-18 13:12:20.443336
+Single Run - Total Training time (in seconds): 0.000424 
+
+Single Run - Score Start time: 2025-06-18 13:12:20.443343
+Single Run - Model score for decision_tree (scikit): 0.6111111111111112
+Single Run - Score End time: 2025-06-18 13:12:20.443493
+Single Run - Total Score time (in seconds): 0.00015 
+
+Cross Val - Start time: 2025-06-18 13:12:20.443498
+Cross Val - Score: [0.72222222 0.82352941 0.64705882 0.47058824 0.64705882 0.76470588
+ 0.64705882]
+Cross Val - Average: 0.6746031746031746
+Crolss Val - End time: 2025-06-18 13:12:20.447936
+Cross Val - Total time (in seconds): 0.004438 
+
+Total time to run fit, score and cross val (in seconds): 0.005029 
+
+ 
+
+----------
+
+
+Running model: support_vector_machine (scikit) 
+
+Single Run - Training Start time: 2025-06-18 13:12:20.447947
+Single Run - Training End time: 2025-06-18 13:12:20.448321
+Single Run - Total Training time (in seconds): 0.000374 
+
+Single Run - Score Start time: 2025-06-18 13:12:20.448328
+Single Run - Model score for support_vector_machine (scikit): 0.5833333333333334
+Single Run - Score End time: 2025-06-18 13:12:20.448571
+Single Run - Total Score time (in seconds): 0.000243 
+
+Cross Val - Start time: 2025-06-18 13:12:20.448576
+Cross Val - Score: [0.55555556 0.88235294 0.88235294 0.76470588 0.70588235 0.82352941
+ 0.70588235]
+Cross Val - Average: 0.7600373482726424
+Crolss Val - End time: 2025-06-18 13:12:20.452813
+Cross Val - Total time (in seconds): 0.004237 
+
+Total time to run fit, score and cross val (in seconds): 0.004872 
+
+ 
+
+----------
+
+
+Running model: random_forest (scikit) 
+
+Single Run - Training Start time: 2025-06-18 13:12:20.452825
+Single Run - Training End time: 2025-06-18 13:12:20.485359
+Single Run - Total Training time (in seconds): 0.032534 
+
+Single Run - Score Start time: 2025-06-18 13:12:20.485370
+Single Run - Model score for random_forest (scikit): 0.8333333333333334
+Single Run - Score End time: 2025-06-18 13:12:20.486956
+Single Run - Total Score time (in seconds): 0.001586 
+
+Cross Val - Start time: 2025-06-18 13:12:20.486962
+Cross Val - Score: [0.83333333 0.88235294 0.82352941 0.70588235 0.76470588 0.88235294
+ 0.82352941]
+Cross Val - Average: 0.8165266106442577
+Crolss Val - End time: 2025-06-18 13:12:20.728115
+Cross Val - Total time (in seconds): 0.241153 
+
+Total time to run fit, score and cross val (in seconds): 0.275298 
+
+ 
+
+----------
+
+
+Running model: naive_bayes (scikit) 
+
+Single Run - Training Start time: 2025-06-18 13:12:20.728130
+Single Run - Training End time: 2025-06-18 13:12:20.728413
+Single Run - Total Training time (in seconds): 0.000283 
+
+Single Run - Score Start time: 2025-06-18 13:12:20.728420
+Single Run - Model score for naive_bayes (scikit): 0.75
+Single Run - Score End time: 2025-06-18 13:12:20.728613
+Single Run - Total Score time (in seconds): 0.000193 
+
+Cross Val - Start time: 2025-06-18 13:12:20.728619
+Cross Val - Score: [0.61111111 0.70588235 0.82352941 0.76470588 0.76470588 0.82352941
+ 0.58823529]
+Cross Val - Average: 0.7259570494864612
+Crolss Val - End time: 2025-06-18 13:12:20.731778
+Cross Val - Total time (in seconds): 0.003159 
+
+Total time to run fit, score and cross val (in seconds): 0.003654 
+
+ 
+
+----------
+
+
+Running model: k_nearest_neighbours (scikit) 
+
+Single Run - Training Start time: 2025-06-18 13:12:20.731789
+Single Run - Training End time: 2025-06-18 13:12:20.732039
+Single Run - Total Training time (in seconds): 0.00025 
+
+Single Run - Score Start time: 2025-06-18 13:12:20.732046
+Single Run - Model score for k_nearest_neighbours (scikit): 0.6944444444444444
+Single Run - Score End time: 2025-06-18 13:12:20.732928
+Single Run - Total Score time (in seconds): 0.000882 
+
+Cross Val - Start time: 2025-06-18 13:12:20.732933
+Cross Val - Score: [0.88888889 0.82352941 0.70588235 0.76470588 0.64705882 0.64705882
+ 0.76470588]
+Cross Val - Average: 0.7488328664799253
+Crolss Val - End time: 2025-06-18 13:12:20.738189
+Cross Val - Total time (in seconds): 0.005256 
+
+Total time to run fit, score and cross val (in seconds): 0.006405 
+
+ 
+
+----------
+
+
+Running model: rstsf (aeon) 
+
+Single Run - Training Start time: 2025-06-18 13:12:20.738201
+Single Run - Training End time: 2025-06-18 13:12:20.978885
+Single Run - Total Training time (in seconds): 0.240684 
+
+Single Run - Score Start time: 2025-06-18 13:12:20.978911
+Single Run - Model score for rstsf (aeon): 0.8333333333333334
+Single Run - Score End time: 2025-06-18 13:12:20.991121
+Single Run - Total Score time (in seconds): 0.01221 
+
+Cross Val - Start time: 2025-06-18 13:12:20.991129
+Cross Val - Score: [0.83333333 0.88235294 0.88235294 0.82352941 0.70588235 0.88235294
+ 0.82352941]
+Cross Val - Average: 0.8333333333333333
+Crolss Val - End time: 2025-06-18 13:12:22.220767
+Cross Val - Total time (in seconds): 1.229638 
+
+Total time to run fit, score and cross val (in seconds): 1.482579 
+
+ 
+
+----------
+
+
+Running model: time_series_forest (aeon) 
+
+Single Run - Training Start time: 2025-06-18 13:12:22.220786
+Single Run - Training End time: 2025-06-18 13:12:22.454422
+Single Run - Total Training time (in seconds): 0.233636 
+
+Single Run - Score Start time: 2025-06-18 13:12:22.454438
+Single Run - Model score for time_series_forest (aeon): 0.7777777777777778
+Single Run - Score End time: 2025-06-18 13:12:22.498109
+Single Run - Total Score time (in seconds): 0.043671 
+
+Cross Val - Start time: 2025-06-18 13:12:22.498119
+Cross Val - Score: [0.72222222 0.94117647 0.76470588 0.76470588 0.76470588 0.94117647
+ 0.88235294]
+Cross Val - Average: 0.8258636788048551
+Crolss Val - End time: 2025-06-18 13:12:24.510449
+Cross Val - Total time (in seconds): 2.01233 
+
+Total time to run fit, score and cross val (in seconds): 2.289672 
+
+ 
+
+----------
+
+
+Running model: k_neighbours (aeon) 
+
+Single Run - Training Start time: 2025-06-18 13:12:24.510464
+Single Run - Training End time: 2025-06-18 13:12:24.510659
+Single Run - Total Training time (in seconds): 0.000195 
+
+Single Run - Score Start time: 2025-06-18 13:12:24.510666
+Single Run - Model score for k_neighbours (aeon): 0.75
+Single Run - Score End time: 2025-06-18 13:12:24.514646
+Single Run - Total Score time (in seconds): 0.00398 
+
+Cross Val - Start time: 2025-06-18 13:12:24.514653
+Cross Val - Score: [0.77777778 0.76470588 0.76470588 0.88235294 0.70588235 0.64705882
+ 0.94117647]
+Cross Val - Average: 0.7833800186741363
+Crolss Val - End time: 2025-06-18 13:12:24.527028
+Cross Val - Total time (in seconds): 0.012375 
+
+Total time to run fit, score and cross val (in seconds): 0.01657 
+
+ 
+
+----------
+
+
+Running model: ordinal (aeon) 
+
+Single Run - Training Start time: 2025-06-18 13:12:24.527041
+Single Run - Training End time: 2025-06-18 13:12:24.706805
+Single Run - Total Training time (in seconds): 0.179764 
+
+Single Run - Score Start time: 2025-06-18 13:12:24.706834
+Single Run - Model score for ordinal (aeon): 0.4722222222222222
+Single Run - Score End time: 2025-06-18 13:12:24.712459
+Single Run - Total Score time (in seconds): 0.005625 
+
+Cross Val - Start time: 2025-06-18 13:12:24.712468
+Cross Val - Score: [0.44444444 0.47058824 0.58823529 0.47058824 0.52941176 0.47058824
+ 0.52941176]
+Cross Val - Average: 0.5004668534080299
+Crolss Val - End time: 2025-06-18 13:12:24.762077
+Cross Val - Total time (in seconds): 0.049609 
+
+Total time to run fit, score and cross val (in seconds): 0.235042 
+
+ 
+
+----------
+
+
+Running model: catch22 (aeon) 
+
+Single Run - Training Start time: 2025-06-18 13:12:24.762090
+Single Run - Training End time: 2025-06-18 13:12:24.862703
+Single Run - Total Training time (in seconds): 0.100613 
+
+Single Run - Score Start time: 2025-06-18 13:12:24.862724
+Single Run - Model score for catch22 (aeon): 0.75
+Single Run - Score End time: 2025-06-18 13:12:24.868266
+Single Run - Total Score time (in seconds): 0.005542 
+
+Cross Val - Start time: 2025-06-18 13:12:24.868273
+Cross Val - Score: [0.61111111 0.94117647 0.76470588 0.76470588 0.82352941 0.88235294
+ 0.82352941]
+Cross Val - Average: 0.8015873015873014
+Crolss Val - End time: 2025-06-18 13:12:25.402041
+Cross Val - Total time (in seconds): 0.533768 
+
+Total time to run fit, score and cross val (in seconds): 0.639958 
+
+ 
+
+----------
+
+
+Running model: hive_cote_v2 (aeon) 
+
+Single Run - Training Start time: 2025-06-18 13:12:25.402054
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+Single Run - Training End time: 2025-06-18 13:12:45.108456
+Single Run - Total Training time (in seconds): 19.706402 
+
+Single Run - Score Start time: 2025-06-18 13:12:45.108484
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+Single Run - Model score for hive_cote_v2 (aeon): 0.9166666666666666
+Single Run - Score End time: 2025-06-18 13:12:50.140872
+Single Run - Total Score time (in seconds): 5.032388 
+
+Cross Val - Start time: 2025-06-18 13:12:50.140886
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+Cross Val - Score: [0.83333333 0.94117647 0.88235294 0.76470588 0.76470588 0.94117647
+ 0.88235294]
+Cross Val - Average: 0.8585434173669467
+Crolss Val - End time: 2025-06-18 13:15:48.919841
+Cross Val - Total time (in seconds): 178.778955 
+
+Total time to run fit, score and cross val (in seconds): 203.5178 

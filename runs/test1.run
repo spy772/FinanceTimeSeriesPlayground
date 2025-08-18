@@ -1,0 +1,363 @@
+Running model: linear_regression 
+
+Model score for linear_regression: 0.8000207543373108
+Cross Val Score for linear_regression: ('linear_regression', array([ 0.        , -2.8934598 ,  0.20835721, -1.02390718, -2.66171503,
+        0.        ,  0.82799816])) 
+
+
+---------- 
+
+
+Running model: stochastic_gradient_descent 
+
+Model score for stochastic_gradient_descent: 0.6388888888888888
+Cross Val Score for stochastic_gradient_descent: ('stochastic_gradient_descent', array([0.55555556, 0.47058824, 0.52941176, 0.58823529, 0.70588235,
+       0.64705882, 0.70588235])) 
+
+
+---------- 
+
+
+Running model: logistic_regression 
+
+Model score for logistic_regression: 0.5277777777777778
+Cross Val Score for logistic_regression: ('logistic_regression', array([0.72222222, 0.64705882, 0.52941176, 0.58823529, 0.52941176,
+       0.52941176, 0.64705882])) 
+
+
+---------- 
+
+
+Running model: decision_tree 
+
+Model score for decision_tree: 0.5833333333333334
+Cross Val Score for decision_tree: ('decision_tree', array([0.77777778, 0.88235294, 0.52941176, 0.47058824, 0.47058824,
+       0.70588235, 0.52941176])) 
+
+
+---------- 
+
+
+Running model: support_vector_machine 
+
+Model score for support_vector_machine: 0.8611111111111112
+Cross Val Score for support_vector_machine: ('support_vector_machine', array([0.55555556, 0.88235294, 0.88235294, 0.76470588, 0.70588235,
+       0.82352941, 0.70588235])) 
+
+
+---------- 
+
+
+Running model: random_forest 
+
+Model score for random_forest: 0.8888888888888888
+Cross Val Score for random_forest: ('random_forest', array([0.77777778, 0.88235294, 0.88235294, 0.64705882, 0.76470588,
+       0.88235294, 0.82352941])) 
+
+
+---------- 
+
+
+Running model: naive_bayes 
+
+Model score for naive_bayes: 0.75
+Cross Val Score for naive_bayes: ('naive_bayes', array([0.61111111, 0.70588235, 0.82352941, 0.76470588, 0.76470588,
+       0.82352941, 0.58823529])) 
+
+
+---------- 
+
+
+Running model: k_nearest_neighbours 
+
+Model score for k_nearest_neighbours: 0.7777777777777778
+Cross Val Score for k_nearest_neighbours: ('k_nearest_neighbours', array([0.88888889, 0.82352941, 0.70588235, 0.76470588, 0.64705882,
+       0.64705882, 0.76470588])) 
+
+
+---------- 
+
+
+Running model: rstsf 
+
+Model score for rstsf: 0.8888888888888888
+Cross Val Score for rstsf: ('rstsf', array([0.83333333, 0.94117647, 0.88235294, 0.76470588, 0.70588235,
+       0.88235294, 0.88235294])) 
+
+
+---------- 
+
+
+Running model: time_series_forest 
+
+Model score for time_series_forest: 0.9166666666666666
+Cross Val Score for time_series_forest: ('time_series_forest', array([0.72222222, 0.94117647, 0.82352941, 0.76470588, 0.70588235,
+       0.94117647, 0.88235294])) 
+
+
+---------- 
+
+
+Running model: k_neighbours 
+
+Model score for k_neighbours: 0.8333333333333334
+Cross Val Score for k_neighbours: ('k_neighbours', array([0.77777778, 0.76470588, 0.76470588, 0.88235294, 0.70588235,
+       0.64705882, 0.94117647])) 
+
+
+---------- 
+
+
+Running model: ordinal 
+
+Model score for ordinal: 0.4166666666666667
+Cross Val Score for ordinal: ('ordinal', array([0.44444444, 0.52941176, 0.47058824, 0.47058824, 0.58823529,
+       0.29411765, 0.58823529])) 
+
+
+---------- 
+
+
+Running model: shapelet 
+
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/tslearn/shapelets/shapelets.py:354: FutureWarning: The default value for 'scale' is set to False in version 0.4 to ensure backward compatibility, but is likely to change in a future version.
+  warnings.warn("The default value for 'scale' is set to False "
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+Model score for shapelet: 0.3611111111111111
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/tslearn/shapelets/shapelets.py:354: FutureWarning: The default value for 'scale' is set to False in version 0.4 to ensure backward compatibility, but is likely to change in a future version.
+  warnings.warn("The default value for 'scale' is set to False "
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/tslearn/shapelets/shapelets.py:354: FutureWarning: The default value for 'scale' is set to False in version 0.4 to ensure backward compatibility, but is likely to change in a future version.
+  warnings.warn("The default value for 'scale' is set to False "
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/tslearn/shapelets/shapelets.py:354: FutureWarning: The default value for 'scale' is set to False in version 0.4 to ensure backward compatibility, but is likely to change in a future version.
+  warnings.warn("The default value for 'scale' is set to False "
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/tslearn/shapelets/shapelets.py:354: FutureWarning: The default value for 'scale' is set to False in version 0.4 to ensure backward compatibility, but is likely to change in a future version.
+  warnings.warn("The default value for 'scale' is set to False "
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+WARNING:tensorflow:5 out of the last 5 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x16a6c4a40> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/tslearn/shapelets/shapelets.py:354: FutureWarning: The default value for 'scale' is set to False in version 0.4 to ensure backward compatibility, but is likely to change in a future version.
+  warnings.warn("The default value for 'scale' is set to False "
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+WARNING:tensorflow:6 out of the last 6 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x16ae5cfe0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/tslearn/shapelets/shapelets.py:354: FutureWarning: The default value for 'scale' is set to False in version 0.4 to ensure backward compatibility, but is likely to change in a future version.
+  warnings.warn("The default value for 'scale' is set to False "
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/tslearn/shapelets/shapelets.py:354: FutureWarning: The default value for 'scale' is set to False in version 0.4 to ensure backward compatibility, but is likely to change in a future version.
+  warnings.warn("The default value for 'scale' is set to False "
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/utils/deprecation.py:151: FutureWarning: 'force_all_finite' was renamed to 'ensure_all_finite' in 1.6 and will be removed in 1.8.
+  warnings.warn(
+Cross Val Score for shapelet: ('shapelet', array([0.66666667, 0.64705882, 0.41176471, 0.41176471, 0.47058824,
+       0.58823529, 0.35294118])) 
+
+
+---------- 
+
+
+Running model: catch22 
+
+Model score for catch22: 0.8055555555555556
+Cross Val Score for catch22: ('catch22', array([0.72222222, 0.94117647, 0.82352941, 0.76470588, 0.82352941,
+       0.88235294, 0.82352941])) 
+
+
+---------- 
+
+
+Running model: deep_learning 
+
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 63ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 61ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 63ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 63ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 63ms/step
+Model score for deep_learning: 0.9166666666666666
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 66ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 64ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 66ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 66ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 64ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 66ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 78ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 64ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 64ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 66ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 66ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 68ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 64ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 64ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 66ms/step
+Cross Val Score for deep_learning: ('deep_learning', array([0.83333333, 0.94117647, 0.58823529, 0.64705882, 0.64705882,
+       0.76470588, 0.82352941])) 
+
+
+---------- 
+
+
+Running model: hive_cote_v2 
+
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+Model score for hive_cote_v2: 0.9166666666666666
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+Cross Val Score for hive_cote_v2: ('hive_cote_v2', array([0.83333333, 0.94117647, 0.88235294, 0.76470588, 0.76470588,
+       0.94117647, 0.82352941])) 
+
+
+---------- 
+
+
+/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/sklearn/base.py:474: FutureWarning: `BaseEstimator._validate_data` is deprecated in 1.6 and will be removed in 1.7. Use `sklearn.utils.validation.validate_data` instead. This function becomes public and is part of the scikit-learn developer API.
+  warnings.warn(
+Predict:  [2]
+Traceback (most recent call last):
+  File "/Users/costa/work/workspaces/python/playground/timeseries.py", line 233, in <module>
+    plot_multiple_timeseries(df)
+  File "/Users/costa/work/workspaces/python/playground/timeseries.py", line 219, in plot_multiple_timeseries
+    axes[2, 1].plot(df.columns, df.iloc[5])
+                                ~~~~~~~^^^
+  File "/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1752, in _getitem_axis
+    self._validate_integer(key, axis)
+  File "/Users/costa/work/workspaces/python/playground/.venv/lib/python3.12/site-packages/pandas/core/indexing.py", line 1685, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds
