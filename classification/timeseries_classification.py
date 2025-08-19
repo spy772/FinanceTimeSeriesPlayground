@@ -27,13 +27,12 @@ from colorama import Fore, Style
 # Generate monthly dates for one year
 dates = pd.date_range(start='2024-01-01', periods=12, freq='MS')
 
-# Other things I have done
 og_X, og_y = load_original_timeseries_data(['mixed'])
 new_X, new_y = load_new_timeseries_data(as_numpy=True)
 X = np.concatenate((og_X, new_X))
 y = np.concatenate((og_y, new_y))
 # Without normalization, differnt scales of the data will render innacurate models
-X_norm = normalize(X, norm='l2') # L2 Normalization to have scaled data be within range of 0-1
+X_norm = normalize(X, norm='l2')
 
 X_train, X_test, y_train, y_test = train_test_split(X_norm, y, test_size=0.3)
 
@@ -100,7 +99,7 @@ hive_cote_v2 = HIVECOTEV2() # Ensemble/Hybrid model
 model_list.append(hive_cote_v2)
 model_dict["hive_cote_v2 (aeon)"] = hive_cote_v2
  
-# Iterate through all the models
+# Iterate through all the models, see which one fits hypotheses best
 for model_name, model in model_dict.items():
     print(" \n\n----------\n\n")
     print(Fore.RED + f"Running model: {model_name} \n" + Fore.BLACK)

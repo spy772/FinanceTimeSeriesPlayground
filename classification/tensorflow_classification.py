@@ -22,16 +22,14 @@ def lr_scheduler(epoch, lr):
 
 
 def main():
-    ### y data is not for forecasting, should update it
     og_X, og_y = load_original_timeseries_data(['mixed'], as_numpy=True)
     new_X, new_y = load_new_timeseries_data(as_numpy=True)
     X = np.concatenate((og_X, new_X))
     y = np.concatenate((og_y, new_y))
 
-    X_norm = normalize(X, norm="l2") # use when desired
+    X_norm = normalize(X, norm="l2") # Reduces impact of different scales in the input data
     X_train, X_test, y_train, y_test = train_test_split(X_norm, y, test_size=0.1)
 
-    # Will not be accurate at all because the y values aren't forecast values...
     dl_model = tf.keras.models.Sequential([
         tf.keras.layers.Input(shape=(12,)),
         tf.keras.layers.Dense(15, activation='relu'),
@@ -39,15 +37,13 @@ def main():
         tf.keras.layers.Dense(5, activation='softmax')
     ])
     
-    # lr_schedule = tf.keras.callbacks.LearningRateScheduler(lambda epoch: 1e-8 * 10**(epoch / 20))
     lr_schedule = tf.keras.callbacks.LearningRateScheduler(lr_scheduler)
-
-    optimizer = tf.keras.optimizers.Adam(learning_rate=0.004)
+    optimizer = tf.keras.optimizers.Adam(learning_rate=0.004) # Found 0.004 to be most optimal from lr_scheduler
 
     # Compile the model
     dl_model.compile(
         optimizer=optimizer,
-        loss='sparse_categorical_crossentropy', # Suitable for integer labels (0 to 4)
+        loss='sparse_categorical_crossentropy', # Suitable for integer labels
         metrics=['accuracy']
     )
 

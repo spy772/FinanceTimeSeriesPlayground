@@ -40,6 +40,6 @@ Scikit-Learn offers various feature selection algorithm types:
 * Sequential
     - A greedy algorithm that either goes forwards or backwards
     - Forward starts with 0 features, and iteratively finds the best-fitting feature onto an estimator (maximizes cross-validation score), and then continues the process adding features over and over until the desired amount is reached
-    - Backwards starts with all features and greedily remove features from the set, need to see how this is different from a Recursive method
+    - Backwards starts with all features and greedily removes features from the set, need to see how this is different from a Recursive method
     - Risk of having a local optima due to the greedy nature of the algorithm, but is typically a little more efficient than Recursive methods while still considering inter-feature interactions
     - Useful when considering a moderate amount of features and when you want to consider feature importance sequentially instead of all at once

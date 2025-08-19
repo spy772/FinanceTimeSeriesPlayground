@@ -1,10 +1,9 @@
 import forecasting.tensorflow_forecasting as tf_forecasting
-import forecasting.aeon_forecasting as aeon_forecasting
 import classification.tensorflow_classification as tf_classification
 import segmentation.clustering as clustering
 
 def main():
-    print("Hello from playground!")
+    print("Hello from FinancialTimeSeriesAnalysis!")
 
 
 if __name__ == "__main__":

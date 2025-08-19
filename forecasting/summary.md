@@ -4,7 +4,7 @@ Building Forecasting Neural Networks Summary
 Types of architectures
 ----------------------
 
-There are numerous neural network architectures, and the majority of them can work for time series forecasting work. Of course, some better than others.  
+There are numerous neural network architectures, and the majority of them can work for time series forecasting. Of course, some better than others.  
 
 * Pure deep learning (dense layers): 
     - Using the most basic form of neural networks, each unit in a dense layer is simply an artificial neuron
@@ -40,3 +40,8 @@ There are numerous neural network architectures, and the majority of them can wo
         - This works by the CNN extracting high-level features like local trends or spikes, and then LSTMs analyzing the extracted sequences to learn longer-term dependencies
     - The difference between CNNs and RNNs is that CNNs are better for local pattern recognition, while RNNs are better for sequential dependency recognition amongst data
     - Another common way of using CNNs is to build a few layers of them, and incidentally research finds that earlier-layer CNNs tend to be good at extracting high-level features, and then the subsequent layers sequentially extract lower and lower level features
+
+
+## Choosing TensorFlow instead of aeon
+
+The choice was made to use TensorFlow over aeon for time series forecasting, mainly due to the fact that aeon cannot handle multivariate (and thus multiple time series) time series inputs, and a custom solution had to be created. Overall, it will likely perform better anyways since we may hypertune the model according to this problem's specific needs.
